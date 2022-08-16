@@ -1,0 +1,34 @@
+<div
+  class="simple-list-paste"
+  (contextmenu)="preventDefault($event)"
+  (mouseup)="handleMouseUp($event)"
+>
+  <ul #listEditor>
+    <li
+      *ngFor="let item of list; let idx = index"
+      [class.hidden]="isEmptyValue"
+    >
+      <input
+        (click)="handleClick(idx)"
+        (focus)="handleFocus($event, idx)"
+        (keydown)="handleKeyDown($event, idx)"
+        (keyup)="handleKeyInput($event, idx)"
+        [(ngModel)]="item.value"
+      />
+    </li>
+  </ul>
+  <span
+    [ngStyle]="contextStyle"
+    class="context-menu"
+    *ngIf="contextVisible"
+    #contextMenu
+  >
+    <div
+      class="context-menu-item"
+      (click)="contextSelect(item)"
+      *ngFor="let item of contextMenuList"
+    >
+      {{ item.label }}
+    </div>
+  </span>
+</div>

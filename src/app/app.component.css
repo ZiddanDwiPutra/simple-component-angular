@@ -1,0 +1,8 @@
+p {
+  font-family: Lato;
+}
+
+.main-head {
+  margin-bottom: 2rem;
+  border-bottom: 15px solid lightslategray;
+}

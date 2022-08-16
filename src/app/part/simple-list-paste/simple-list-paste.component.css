@@ -1,0 +1,41 @@
+.simple-list-paste input {
+  border: none;
+  outline: none;
+  width: 98%;
+}
+
+.simple-list-paste {
+  -moz-appearance: textfield-multiline;
+  -webkit-appearance: textarea;
+  appearance: textarea;
+  display: inline-block;
+  border: 1px solid gray;
+  min-height: 100px;
+  overflow: auto;
+  padding: 2px;
+  resize: both;
+  width: 100%;
+  min-width: 200px;
+  cursor: text;
+}
+.simple-list-paste .context-menu {
+  display: inline-block;
+  box-shadow: 1px 1px 5px 0px lightgrey;
+  min-width: 80px;
+  height: fit-content;
+  position: fixed;
+  background: white;
+}
+.simple-list-paste .context-menu div {
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  padding: 5px 0.75rem;
+}
+
+.simple-list-paste .context-menu div:hover {
+  background: lightgray;
+}
+.simple-list-paste .hidden {
+  display: none;
+}
